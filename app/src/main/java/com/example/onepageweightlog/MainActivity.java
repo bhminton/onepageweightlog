@@ -89,9 +89,9 @@ public class MainActivity extends AppCompatActivity {
           //   boolean success =   dbHelper.addOne(dailyLog);
              dbHelper.addOne(dailyLog);
             // Toast.makeText(MainActivity.this, "SUCCESSFULLY ADDED FILE" + success,Toast.LENGTH_LONG).show();
-             newArrayAdapter = new ArrayAdapter<DailyLog>
+             newArrayAdapter = new ArrayAdapter<>
                      (MainActivity.this, android.R.layout.simple_list_item_1,dbHelper.getEverything());
-
+             newListView.setAdapter(newArrayAdapter);
          }
      });
     }
